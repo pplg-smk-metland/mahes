@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111111;
+  font-family: "poppins", sans-serif;
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.countdown {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.box {
+  width: 20vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0, 5);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.12);
+  height: 100%;
+  width: 50%;
+  left: 0;
+}
+
+span.num {
+  background-color: #202020;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 5em;
+}
+
+span.text {
+  font-size: 1.2em;
+  background-color: #2887e3;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .countdown {
+    width: 85vmin;
+  }
+  .box {
+    width: 26vmin;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown {
+    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .box {
+    width: 100%;
+    height: 25vmin;
+  }
+
+  .span text {
+    font-size: 1.5em;
+  }
+}
